@@ -1,10 +1,24 @@
 <?php 
 
-class home
+class home extends controller
 {
     function index()
     {
-        echo "Home - index";
+        parent::callView("masterpage",[
+
+        ]);
+    }
+
+    function sinhvien()
+    {
+        //Call model 
+        $sinhvien=parent::callModel("sinhvienmodel");
+
+        //Call view
+        parent::callView("masterpage",[
+            "page"=>"sinhvien",
+            "listStudents"=>$sinhvien->getInfoStudent()
+        ]);
     }
 
 }
