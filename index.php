@@ -1,6 +1,6 @@
 <?php 
 
-require_once "./mvc/Driver.php";
-$app=new App();
+require_once "./mvc/driver.php";
+$app=new app();
 
 ?>
