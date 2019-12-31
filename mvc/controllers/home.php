@@ -5,7 +5,7 @@ class home extends controller
     function index()
     {
         parent::callView("masterpage",[
-
+            "page"=>"home"
         ]);
     }
 
@@ -20,7 +20,6 @@ class home extends controller
             "listStudents"=>$sinhvien->getInfoStudent()
         ]);
     }
-
 }
 
 ?>
